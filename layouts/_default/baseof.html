@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+
+  <!-- ✅ Background Image -->
+  <div class="image-background"></div>
+
+  <!-- Main content -->
+  {{ block "main" . }}
+  {{ end }}
+
+</body>
+</html>
