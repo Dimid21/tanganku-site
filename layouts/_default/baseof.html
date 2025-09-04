@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-<head>
-  {{ partial "head.html" . }}
-</head>
-<body>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="body">
 
-  <!-- ✅ Background Image -->
-  <div class="image-background"></div>
+    <!-- ✅ Add the image-background div here -->
+    <div class="image-background"></div>
 
-  <!-- Main content -->
-  {{ block "main" . }}
-  {{ end }}
+    <div class="columns w-row">
+      <div class="leftcontent w-col w-col-6 w-col-stack">
+        {{ partial "bio.html" . }}
+        {{ partial "links.html" . }}
+        {{ partial "credit.html" . }}
+      </div>
 
-</body>
+      <div class="rightcontent w-col w-col-6 w-col-stack">
+        {{ partial "intro.html" . }}
+        {{ partial "video.html" . }}
+      </div>
+    </div>
+
+  </body>
 </html>
